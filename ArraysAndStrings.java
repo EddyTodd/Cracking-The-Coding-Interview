@@ -6,7 +6,7 @@ public class ArraysAndStrings {
     public static boolean isUnique(String str) {
         int[] set = new int[256];
         for (int i = 0; i < str.length(); i++)
-            if (++set[(int) str.charAt(i)] == 2) return false;
+            if (set[(int) str.charAt(i)]++ == 1) return false;
         return true;
     }
 
